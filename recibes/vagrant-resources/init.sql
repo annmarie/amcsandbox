@@ -1,0 +1,40 @@
+CREATE DATABASE recibes;
+
+USE recibes;
+
+CREATE TABLE recipe (
+  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  recipe_headline VARCHAR(255) NOT NULL,
+  recipe_body MEDIUMTEXT,
+  recipe_notes MEDIUMTEXT,
+  created TIMESTAMP DEFAULT NOW()
+);
+
+CREATE TABLE tag (
+  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  tag_name VARCHAR(255) NOT NULL,
+  created TIMESTAMP DEFAULT NOW()
+);
+
+CREATE TABLE recipe_tag (
+  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  recipe_id INT(6) NOT NULL,
+  tag_id INT(6) NOT NULL,
+  tag_order INT(6) DEFAULT 0,
+  created TIMESTAMP DEFAULT NOW()
+);
+
+CREATE TABLE ingredient (
+  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  ingredient_title VARCHAR(255) NOT NULL,
+  ingredient_notes MEDIUMTEXT,
+  created TIMESTAMP DEFAULT NOW()
+);
+
+CREATE TABLE recipe_ingredient (
+  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  recipe_id INT(6) NOT NULL,
+  ingredient_id INT(6) NOT NULL,
+  created TIMESTAMP DEFAULT NOW()
+);
+
