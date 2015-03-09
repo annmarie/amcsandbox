@@ -12,7 +12,6 @@
 <div id="mainContent">
 
 
-xxx
 It's working!!!
 
 
