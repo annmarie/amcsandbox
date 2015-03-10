@@ -1,27 +1,58 @@
+<!DOCTYPE html>
 <?php
-require_once("config.php");
 
-$nr = new Recipe();
-$nr->healine = "ddd";
-$nr->body = "xxx";
-$nr->addIngredient("sugar");
-$nr->addTag("sugar");
-$nr->save();
+require_once("conf/config.php");
+require_once("tools/Database.class.php");
+require_once("models.php");
 
-echo "<pre>";
+$dbObj = new Database($conf);
+$pgObj = new RecipePageObj($conf);
 
-$s = new Recipes();
-$recipes = $s->all();
-foreach ($recipes as $r) {
-    $r->getIngredients();
-    print_r($r);
+if ($pgObj->pagetype) {
+    include("recipe/".$pgObj->pagetype.".php");
 }
 
-echo "</pre>";
+exit();
 
+class RecipePageObj {
 
-echo "\nhello";
+    function __construct($conf) {
+        $this->setPageType();
+        $this->setNavBar();
+    }
+
+    private function setNavBar() {
+        $bar = '<a href="/">Home</a>';
+        if ($this->pagetype == "list") {
+            $bar .= ' &gt; Recipes';
+        } else {
+            $bar .= ' &gt; <a href="/recipe.php">Recipes</a>';
+        }
+        if ($this->pagetype == "item") $bar .= ' &gt; Recipe';
+        $this->navbar = $bar;
+    }
+
+    private function setPageType() {
+        $pathkeys = $this::getPathKeys();
+        $key = @$pathkeys[1];
+        if (is_numeric($key)) {
+            $rcp = new Recipe($key);
+            if ($rcp->id) {
+                $this->rcp = $rcp;
+                $this->pagetype = "item";
+            }
+        } elseif ($key == "add") {
+            $this->pagetype = "add";
+        }
+        if (empty($this->pagetype)) {
+            $this->pagetype = "list";
+        }
+    }
+
+    private function getPathKeys() {
+        return explode("/", trim($_SERVER['REQUEST_URI'], "/"));
+    }
+}
 
 ?>
-
 

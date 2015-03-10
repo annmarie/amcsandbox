@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
-  <meta charset="UTF-8">
-  <title>TextBox</title>
-
+  <title>Recibes</title>
+  <link rel="stylesheet" type="text/css" href="/css/screen.css">
+  <style>
+    .menu { 
+        font-size:24px;
+        padding-top:10px;
+        padding-bottom:10px;
+        padding-left:25px;
+    }
+  </style>
 <head>
 <body>
 <div id="mainContent">
+<div class="navbar">Home</div>
 
+</div>
 
-It's working!!!
+<div class="menu">
+<a href="/recipe.php">Recipes</a>
+</div>
 
 
 </div>
