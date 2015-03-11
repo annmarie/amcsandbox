@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/arrow/mypython/lib/python2.6/site-packages'
-let g:netrw_dirhist_2='/Users/arrow/workspace/opentopic/site_configs'
-let g:netrw_dirhist_3='/Users/arrow/dlmac'
-let g:netrw_dirhist_4='/Users/arrow/.pip'
-let g:netrw_dirhist_5='/Users/arrow/.vim'
-let g:netrw_dirhist_6='/Users/arrow/.ssh'
