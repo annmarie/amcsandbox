@@ -1,5 +1,6 @@
-amcsandbox
+envconf
 ==========
 -shell profile scripts 
--vagrant linux box setup
+-linux box setup
+
 
