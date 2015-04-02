@@ -4,28 +4,22 @@ set esckeys
 set ttyfast
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
-" Centralize backups, swapfiles and undo history
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
-if exists("&undodir")
-    set undodir=~/.vim/undo
-endif
 
 " Set command history
 set history=100
 " Enable line numbers
 "set number
 " Enable syntax highlighting
-syntax on
+"syntax on
 " Highlight current line
-set cursorline
+" set cursorline
 " Use spaces, not tabs
 set expandtab
 " Make tabs as wide as four spaces
 set tabstop=4
 " Show “invisible” characters
- set lcs=tab:▸\ ,trail:·,eol:¬
-set list
+" set lcs=tab:▸\ ,trail:·,eol:¬
+" set list
 " Always show status line
 set laststatus=2
 " Disable error bells
@@ -40,11 +34,6 @@ set showmode
 set title
 " Show the (partial) command as it’s being typed
 set showcmd
-" Use relative line numbers
-"if exists("&relativenumber")
-"   set relativenumber
-"   au BufReadPost * set relativenumber
-"endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
