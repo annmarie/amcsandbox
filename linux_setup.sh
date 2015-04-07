@@ -2,10 +2,10 @@
 #SETUP ENVIRONMENT
 #sudo su
 
+#update-alternatives --config editor #(choose vim-tiny)
 
 apt-get -y upgrade
 apt-get -y install build-essential binutils-doc curl screen git vim python-setuptools 
-#update-alternatives --config editor #(choose vim-tiny)
 apt-get -y install apache2
 apt-get -y install php5 php5-curl php5-mysql php5-sqlite php5-xdebug php5-mcrypt php-pear php5-gd php5-cli
 apt-get -y install nginx-full uwsgi uwsgi-plugin-python
@@ -14,6 +14,10 @@ apt-get -y build-dep python
 apt-get -y install python-dev python-virtualenv
 apt-get -y install libxml2-dev libpq-dev
 apt-get -y install memcached
+
+add-apt-repository ppa:webupd8team/sublime-text-2
+apt-get update
+apt-get install sublime-text
 
 
 # Install MySQL without password prompt
