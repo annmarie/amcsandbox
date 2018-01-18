@@ -27,7 +27,7 @@ debconf-set-selections <<< "mysql-server mysql-server/root_password_again passwo
 
 # Install MySQL Server
 # -qq implies -y --force-yes
-apt-get install -qq mysql-server-5.5
+apt-get install -qq mysql-server-5.6
 apt-get install -qq python-mysqldb libmysqlclient-dev
 
 # adding grant privileges to mysql root user from everywhere
