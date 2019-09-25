@@ -1,0 +1,12 @@
+[color]
+	ui = auto
+[alias]
+	ci = commit
+	co = checkout
+	st = status
+	br = branch
+[user]
+	name = Ann Marie Conway
+	email = aconway2@meredith.com
+[url "https://"]
+	insteadOf = git://
