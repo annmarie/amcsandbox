@@ -13,5 +13,6 @@ export HISTCONTROL=ignoredups
 export HISTIGNORE="ls:cd:cd -:pwd;exit:date:* --help"
 
 # HDM stuff
-export GITHUB_TOKEN=XXX
+export GITHUB_TOKEN=9653f51beac763b31caa871a5df5adedb03ccd02
 
+export BASH_SILENCE_DEPRECATION_WARNING=1

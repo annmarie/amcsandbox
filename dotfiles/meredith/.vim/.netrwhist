@@ -1,5 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/aconway/.docker'
-let g:netrw_dirhist_2='/Users/aconway/.docker/machine/machines'
-let g:netrw_dirhist_3='/Users/aconway/.docker/machine/machines/dinghy'
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/Users/admin/workspace/xxx'
